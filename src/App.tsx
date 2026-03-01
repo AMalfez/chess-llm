@@ -5,6 +5,7 @@ import GameControls from './components/GameControls';
 // import MoveHistory from './components/MoveHistory';
 import GameStatus from './components/GameStatus';
 import { AVAILABLE_MODELS } from './types/chess';
+import { Analytics } from '@vercel/analytics/react';
 import { getAIMove } from './services/llmService';
 import './App.css';
 
@@ -121,6 +122,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
