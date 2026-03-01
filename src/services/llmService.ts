@@ -14,11 +14,11 @@ Legal moves: ${legalMoves.join(', ')}
 Respond with ONLY the move in standard algebraic notation (e.g., "e4", "Nf3", "O-O"). No explanation, just the move.`;
 
   try {
-    const response = await fetch('https://api.together.xyz/v1/chat/completions', {
+    const response = await fetch('https://router.huggingface.co/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${import.meta.env.VITE_TOGETHER_API_KEY || ''}`
+        'Authorization': `Bearer ${import.meta.env.VITE_HF_TOKEN || ''}`
       },
       body: JSON.stringify({
         model: modelId,

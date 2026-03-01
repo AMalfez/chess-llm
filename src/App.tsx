@@ -109,7 +109,7 @@ function App() {
               isAIThinking={isAIThinking}
             />
 
-            <MoveHistory moves={game.history()} />
+            {/* <MoveHistory moves={game.history()} /> */}
           </div>
 
           <div className="board-container">
