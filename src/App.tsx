@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Chess, type Square } from 'chess.js';
 import ChessBoard from './components/ChessBoard';
 import GameControls from './components/GameControls';
-import MoveHistory from './components/MoveHistory';
+// import MoveHistory from './components/MoveHistory';
 import GameStatus from './components/GameStatus';
 import { AVAILABLE_MODELS } from './types/chess';
 import { getAIMove } from './services/llmService';
