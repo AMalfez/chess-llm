@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { Chess, type Square } from 'chess.js';
 import ChessBoard from './components/ChessBoard';
 import GameControls from './components/GameControls';
-// import MoveHistory from './components/MoveHistory';
+import MoveHistory from './components/MoveHistory';
 import GameStatus from './components/GameStatus';
 import { AVAILABLE_MODELS } from './types/chess';
 import { Analytics } from '@vercel/analytics/react';
 import { getAIMove } from './services/llmService';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './App.css';
 
 function App() {
@@ -110,7 +111,7 @@ function App() {
               isAIThinking={isAIThinking}
             />
 
-            {/* <MoveHistory moves={game.history()} /> */}
+            <MoveHistory moves={game.history()} /> 
           </div>
 
           <div className="board-container">
@@ -122,6 +123,7 @@ function App() {
           </div>
         </div>
       </div>
+      <SpeedInsights />
       <Analytics />
     </div>
   );
